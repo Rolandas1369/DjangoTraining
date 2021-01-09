@@ -1,0 +1,8 @@
+new env creation
+python -m venv venv
+echo "# Dj" >> README.md
+git init
+one file required
+
+git commit -m "first commit"
+
