@@ -17,9 +17,10 @@ from django.contrib import admin
 from django.urls import path
 
 from cv.views import home
-from cv.models import CvStructure
+from cv.models import CvStructure, Link
 
 admin.site.register(CvStructure)
+admin.site.register(Link)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

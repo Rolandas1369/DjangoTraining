@@ -1,6 +1,7 @@
 from django.db import models
 
 # Create your models here.
+# modeliu classe
 class CvStructure(models.Model):
     name = models.CharField(max_length=200)
     city = models.CharField(max_length=200)
@@ -9,3 +10,6 @@ class CvStructure(models.Model):
 
     def __str__(self):
         return self.name
+
+class Link(models.Model):
+    link = models.TextField()

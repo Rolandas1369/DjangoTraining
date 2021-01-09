@@ -5,14 +5,30 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
 <body>
-    {% for item in statuses %}
-        {% if item == 200 %}
-            <p>Yra 200</p>
-        {% endif %}
-        <h1>cv bankas {{item}}</h1>
-    {% endfor %}
-    {% include "navigation.html" %}
+    <h1>Nuorodos su statusais</h1>
+    <table style="border: solid 1px black">
+        <thead>
+        <tr style="border: solid 1px black">
+            <td style="border: solid 1px black">Nuoroda</td>
+            <td style="border: solid 1px black">Statusas</td>
+        </tr>
+            </thead>
+            <tbody >
+                {% for item in info %}
+                    <tr>
+                        <td style="border: solid 1px black"><a href="{{item.link}}">nuoroda</a></td>
+                        <td style="border: solid 1px black">{{item.status}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+    </table>
+
+
+
+
+<!--    {% include "navigation.html" %}-->
 
 </body>
 </html>
