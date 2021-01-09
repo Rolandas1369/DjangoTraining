@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,13 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>cv bankas {{cvbankas_status}}</h1>
-    <h1>Is cvonline {{cvonline_status}}</h1>
+    {% for item in statuses %}
+        {% if item == 200 %}
+            <p>Yra 200</p>
+        {% endif %}
+        <h1>cv bankas {{item}}</h1>
+    {% endfor %}
+    {% include "navigation.html" %}
+
 </body>
 </html>
